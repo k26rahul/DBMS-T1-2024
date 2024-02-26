@@ -1,0 +1,121 @@
+-- SELECT DISTINCT
+--   first_name,
+--   last_name,
+--   LENGTH(first_name) AS len
+-- FROM
+--   customer
+-- WHERE
+--   first_name LIKE 'A%'
+--   AND last_name NOT LIKE 'B%'
+--   AND last_name <> 'Selby'
+--   AND LENGTH(first_name) BETWEEN 3 AND 5
+-- ORDER BY
+--   len DESC
+-- SELECT
+--   1 = 1 AS result
+-- SELECT
+--   length,
+--   title,
+--   rental_Rate
+-- FROM
+--   film
+-- WHERE
+--   length > 180
+--   AND rental_Rate < 1
+-- ORDER BY
+--   length DESC,
+--   title
+-- OFFSET
+--   3
+-- FETCH FIRST
+--   2 ROW ONLY
+-- SELECT
+--   film_id,
+--   title
+-- FROM
+--   film
+-- WHERE
+--   title LIKE 'A%'
+-- ORDER BY
+--   title
+-- LIMIT
+--   10
+-- SELECT
+--   payment_id,
+--   amount * 1000 AS amount,
+--   payment_date::date AS date
+-- FROM
+--   payment
+-- WHERE
+--   payment_date::date IN ('2007-02-15', '2007-02-16')
+-- ORDER BY
+--   date DESC,
+--   amount
+-- OFFSET
+--   500
+-- LIMIT
+--   100
+-- SELECT
+--   first_name,
+--   last_name
+-- FROM
+--   customer
+-- WHERE
+--   first_name ~~ 'Dar%'
+-- SELECT
+--   address,
+--   address2
+-- FROM
+--   address
+-- WHERE
+--   address2 IS NULL
+-- CREATE TABLE
+--   basket_a (a INT PRIMARY KEY, fruit_a VARCHAR(100) NOT NULL);
+-- CREATE TABLE
+--   basket_b (b INT PRIMARY KEY, fruit_b VARCHAR(100) NOT NULL);
+-- INSERT INTO
+--   basket_a (a, fruit_a)
+-- VALUES
+--   (1, 'Apple'),
+--   (2, 'Orange'),
+--   (3, 'Banana'),
+--   (4, 'Cucumber');
+-- INSERT INTO
+--   basket_b (b, fruit_b)
+-- VALUES
+--   (1, 'Orange'),
+--   (2, 'Apple'),
+--   (3, 'Watermelon'),
+--   (4, 'Pear');
+-- SELECT
+--   *
+-- FROM
+--   basket_a;
+-- SELECT
+--   *
+-- FROM
+--   basket_b;
+-- SELECT
+--   a,
+--   fruit_a,
+--   b,
+--   fruit_b
+-- FROM
+--   basket_a
+--   FULL JOIN basket_b ON fruit_a = fruit_b
+-- WHERE
+--   a IS NULL
+--   OR b IS NULL
+-- SELECT
+--   f.title
+-- FROM
+--   film as f
+-- ORDER BY
+--   f.title
+-- LIMIT
+--   5;
+SELECT DISTINCT
+  first_name,
+  last_name
+FROM
+  customer
