@@ -1,4 +1,4 @@
-# IITM-DBMS T1 2024
+# IITM BS DBMS, T1 2024
 
 Notes and code for the course.
 
